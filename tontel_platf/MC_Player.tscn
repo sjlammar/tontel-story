@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://MC/mc_spreet1.png" type="Texture" id=2]
+[ext_resource path="res://MC/mc_spreet2.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 7, 8 )
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 132, 49 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 32 )
+
+[node name="MC_sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 33 )
