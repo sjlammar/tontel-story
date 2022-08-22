@@ -4,10 +4,10 @@ const UP = Vector2(0, -1)
 var motion = Vector2()
 var gravity = 15
 var acceleration = 5
-var max_speed = 60
+var max_speed = 100
 var jump_force = -180
 var jump_count = 0
-var friction = false
+
 
 func _physics_process(delta):
 	movement()
